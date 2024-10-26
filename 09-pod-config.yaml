@@ -10,16 +10,16 @@ spec:
       env:
       - name: course
         ValueFrom:
-          ConfigMapKeyRef:
+          configMapKeyRef:
             name: configmap
             key: course
       - name: trainer
         ValueFrom:
-          ConfigMapKeyRef:
+          configMapKeyRef:
             name: configmap
             key: trainer
       - name: duration
         ValueFrom:
-          ConfigMapKeyRef:
+          configMapKeyRef:
             name: configmap
             key: duration
