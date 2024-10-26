@@ -9,7 +9,7 @@ spec:
     environment: dev
     module: backend
   ports:
-    name: nginx-svc-node-port
+  - name: nginx-svc-node-port
     protocol: TCP
     port: 80
     targetPort: 80

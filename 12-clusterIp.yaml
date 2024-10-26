@@ -3,6 +3,7 @@ apiVersion: v1
 metadata:
   name: clusterip
 spec:
+  type: ClusterIP
   selector:
     project: expense
     environment: dev
