@@ -1,0 +1,25 @@
+#refering the values from configmap
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-config
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      env:
+      - name: course
+        ValueFrom:
+          ConfigMapKeyRef:
+            name: config-map
+            key: course
+      - name: trainer
+        ValueFrom:
+          ConfigMapKeyRef:
+            name: config-map
+            key: trainer
+      - name: duration
+        ValueFrom:
+          ConfigMapKeyRef:
+            name: config-map
+            key: duration
