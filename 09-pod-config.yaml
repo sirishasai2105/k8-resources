@@ -9,17 +9,17 @@ spec:
       image: nginx
       env:
       - name: course
-        ValueFrom:
+        valueFrom:
           configMapKeyRef:
             name: configmap
             key: course
       - name: trainer
-        ValueFrom:
+        valueFrom:
           configMapKeyRef:
             name: configmap
             key: trainer
       - name: duration
-        ValueFrom:
+        valueFrom:
           configMapKeyRef:
             name: configmap
             key: duration
