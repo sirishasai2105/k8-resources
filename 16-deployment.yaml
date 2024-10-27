@@ -20,9 +20,9 @@ spec:
     spec:
        containers:
         - name: nginx
-          #image: nginx
+          image: nginx
           #image: nginx:stable-perl
-          image: nginx:stable-bookworm-perl
+          #image: nginx:stable-bookworm-perl
 
 ---
 kind: Service
