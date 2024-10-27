@@ -11,13 +11,13 @@ spec:
     matchLabels:
       project: expense
       module: backend
-template:
-  metadata:
-    labels:
-      project: expense
-      module: backend
-  spec:
-    containers:
-    - name: nginx
-      image: nginx
+  template:
+    metadata:
+      labels:
+        project: expense
+        module: backend
+    spec:
+       containers:
+        - name: nginx
+          image: nginx
   
