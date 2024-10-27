@@ -21,7 +21,7 @@ spec:
        containers:
         - name: nginx
           #image: nginx
-          image: nginx:stable-perl
+          #image: nginx:stable-perl
           image: nginx:stable-bookworm-perl
 
 ---
