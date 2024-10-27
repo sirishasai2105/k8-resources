@@ -9,7 +9,7 @@ spec:
     environment: dev
     module: backend
   ports:
-    name: loadbalancer-svc
+  - name: loadbalancer-svc
     protocol: TCP
     port: 80
     targetPort: 80
