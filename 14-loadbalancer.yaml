@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: load-balancer
+spec:
+  type: LoadBalancer
+  selector:
+    project: expense
+    environment: dev
+    module: backend
+  ports:
+    name: loadbalancer-svc
+    protocol: TCP
+    port: 80
+    targetPort: 80
+
