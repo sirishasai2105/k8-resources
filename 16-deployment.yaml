@@ -22,3 +22,19 @@ spec:
         - name: nginx
           image: nginx
 
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-1
+spec:
+  selector:
+    project: expense
+    module: backend
+  ports:
+  - name: nginx-svc
+    protocol: TCP
+    port: 80
+    targetPort: 80
+
+
