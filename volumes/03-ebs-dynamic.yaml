@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: ebs-dynamic-claim
 spec:
-  StorageClassName: ebs-sc
+  storageClassName: ebs-sc
   accessModes:
   - ReadWriteOnce
   resources:
