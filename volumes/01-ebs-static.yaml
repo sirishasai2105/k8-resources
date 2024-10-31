@@ -20,7 +20,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: ebs-static-claim
   label:
-    type: ebs-static pvc
+    type: ebs-static-pvc
 spec:
   storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set
   volumeName: ebs-static
