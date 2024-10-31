@@ -51,9 +51,18 @@ spec:
 
 ---
 
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: nginx-svc
-#   labels
+kind: Service
+apiVersion: v1
+metadata:
+  name: load-balancer
+spec:
+  type: LoadBalancer
+  selector:
+    purpose: ebs-claim
+  ports:
+  - name: loadbalancer-svc
+    protocol: TCP
+    port: 80
+    targetPort: 80
+  
     
