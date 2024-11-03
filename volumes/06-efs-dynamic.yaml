@@ -12,10 +12,13 @@ spec:
 
 ---
 
+## POD NOT STARTING ###
 apiVersion: v1
 kind: Pod
 metadata:
   name: efs-app
+  labels:
+    purpose: efs-dynamic
 spec:
   containers:
     - name: nginx
@@ -27,3 +30,19 @@ spec:
     - name: persistent-storage
       persistentVolumeClaim:
         claimName: efs-claim
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-svc
+spec:
+  type: LoadBalancer
+  selector:
+    purpose: efs-dynamic
+  ports:
+  - name: nginx-svc-port
+    protocol: TCP
+    port: 80 # service port
+    targetPort: 80 # container port
